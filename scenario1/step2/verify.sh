@@ -12,7 +12,7 @@ function passed() {
 
 PODSTAT="$(k get po/nginx -o jsonpath='{.status.phase}' || failed )"
 
-if [[ "x$PODSTAT" == "xRunning" ]]; then
+if [[ "x$PODSTAT" == "Running" ]]; then
   passed
 else
   failed
