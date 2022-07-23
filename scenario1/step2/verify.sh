@@ -1,19 +1,8 @@
 #!/bin/bash
 
-function failed() {
-  # User did not succeed. Unceremoniously terminate to avoid cheating
-  exit 255
-}
-
-function passed() {
-  echo "PASSED"
-  exit 0
-}
-
-PODSTAT="$(k get po/nginx -o jsonpath='{.status.phase}' || failed )"
-
-if [[ "$PODSTAT" = "Running" ]]; then
-  passed
+if [ $(k get pod nginx -o jsonpath='{.status.phase}') = 'Running' ]
+then
+   echo 'PASSED'
 else
-  failed
-fi
+   exit 1
+fi 
