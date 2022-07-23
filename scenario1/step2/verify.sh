@@ -1,7 +1,19 @@
 #!/bin/bash
 
-if [[ $(k get pod nginx -o jsonpath='{.status.phase}') != 'Running' ]];then
-   exit 255
+function failed() {
+  # User did not succeed. Unceremoniously terminate to avoid cheating
+  exit 255
+}
+
+function passed() {
+  echo "PASSED"
+  exit 0
+}
+
+PODSTAT="$(k get po/nginx -o jsonpath='{.status.phase}' || failed )"
+
+if [[ "x$PODSTAT" == "xRunning" ]]; then
+  passed
 else
-   exit 0
-fi 
+  failed
+fi
