@@ -12,9 +12,10 @@
         "text": "step1/step1.md"
       },
       {
-        "title": "Fix the broken pod"
-        "text" : "step2/step2.md"
+        "title": "Fix the broken pod",
+        "text": "step2/step2.md",
         "verify": "step2/verify.sh"
+      }
     ],
     "finish": {
       "text": "finish.md"
