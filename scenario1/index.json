@@ -8,7 +8,7 @@
     "steps": [
       {
         "title": "List all pods",
-        "background": "background.sh",
+        "background": "step1/background.sh",
         "text": "step1/step1.md"
       }
     ],
