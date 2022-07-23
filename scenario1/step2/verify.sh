@@ -1,9 +1,8 @@
 #!/bin/bash
 
-if [[ $(k get pod nginx -o jsonpath='{.status.phase}') == 'Running' ]]
+if [[ $(k get pod nginx -o jsonpath='{.status.phase}') != 'Running' ]]
 then
-   echo 'PASSED'
-   exit 0
+   exit 255
 else
-   exit 1
+   exit 0
 fi 
