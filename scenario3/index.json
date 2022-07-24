@@ -1,0 +1,27 @@
+{
+  "title": "Fixing Deployments",
+  "description": "Use a simple one node Kubernetes cluster to demonstarte and troubleshoot scheduling",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "List all pods",
+        "background": "step1/background.sh",
+        "text": "step1/step1.md"
+      },
+      {
+        "title": "Fix the broken deployment",
+        "text": "step2/step2.md",
+        "verify": "step2/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
