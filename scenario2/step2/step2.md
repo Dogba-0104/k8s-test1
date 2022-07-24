@@ -3,9 +3,9 @@ As you can see you have an mysql pod in a bad state.
 <br>
 The objective is to fix this pod, good start would be describing the pod
 <br>
-RUN `k describe pod nginx`
+RUN `k describe pod mysql`
 <br>
-Maybe next try lookiong at the logs
+Maybe next try looking at the logs
 <br>
 RUN `k logs mysql`
 <br>
