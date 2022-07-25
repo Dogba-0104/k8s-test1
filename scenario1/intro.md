@@ -1,8 +1,4 @@
 
-<br>
-
-### Welcome !
-
-Testing this scenario we'll learn how to `get pods`.
+In this scenario you have a broken pod to fix, good luck!!
 
 

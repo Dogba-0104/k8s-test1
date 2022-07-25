@@ -1,13 +1,13 @@
 {
-  "title": "Kubernetes 1node",
-  "description": "Use a simple one node Kubernetes cluster and let user list all pods",
+  "title": "Image issues",
+  "description": "Use a simple one node Kubernetes cluster to demonstrate and fix ImagePull errors",
   "details": {
     "intro": {
       "text": "intro.md"
     },
     "steps": [
       {
-        "title": "List all pods",
+        "title": "Where do we start?",
         "background": "step1/background.sh",
         "text": "step1/step1.md"
       },
