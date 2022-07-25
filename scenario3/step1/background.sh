@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$(cat <<EOF | kubectl apply -f -                                                                                                                         0|1 х │ 4s 
+cat <<EOF | kubectl apply -f -                                                                                                                         0|1 х │ 4s 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -21,7 +21,7 @@ spec:
       containers:
       - image: nginx
         name: nginx
-EOF)
+EOF
 
 
 sleep 10
