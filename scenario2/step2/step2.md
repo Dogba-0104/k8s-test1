@@ -1,8 +1,5 @@
-<br>
 As you can see you have an mysql pod in a bad state.
-<br>
 The objective is to fix this pod, good start would be describing the pod
-<br>
 ```plain
 
 k describe pod mysql
@@ -10,6 +7,7 @@ k describe pod mysql
 
 Maybe next try looking at the logs
 ```plain
+
 k logs mysql
 ```{{exec}}
 
