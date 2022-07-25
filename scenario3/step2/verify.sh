@@ -9,7 +9,7 @@ function passed() {
   exit 0
 }
 
-PODSTAT="$(kubectl get -l app=nginx -o jsonpath='{.status.phase}' || failed )"
+PODSTAT="$(kubectl get pod  -l app=nginx -o jsonpath='{.status.phase}' || failed )"
 
 if [[ "x$PODSTAT" == "xRunning" ]]; then
   passed
