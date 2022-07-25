@@ -1,2 +1,5 @@
+Start by looking at the pods in all namespaces
+```plain
 
-Run `k get pod -A`
+k get pod -A
+```{{exec}}
