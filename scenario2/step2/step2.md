@@ -3,14 +3,18 @@ As you can see you have an mysql pod in a bad state.
 <br>
 The objective is to fix this pod, good start would be describing the pod
 <br>
-RUN `k describe pod mysql`
-<br>
+```plain
+
+k describe pod mysql
+```{{exec}}
+
 Maybe next try looking at the logs
-<br>
-RUN `k logs mysql`
-<br>
+```plain
+k logs mysql
+```{{exec}}
+
 Now fix it!!!
-<br>
+
 Once you have it running click on 
-***CHECK***
+CHECK
 to get the flag
