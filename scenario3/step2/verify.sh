@@ -8,8 +8,8 @@ function passed() {
   echo "PASSED"
   exit 0
 }
-
-PODSTAT="$(kubectl get pod  -l app=nginx -o jsonpath='{.status.phase}' || failed )"
+POD=$(kubectl get po -l app=nginx -o custom-columns=POD:metadata.name --no-headers)
+PODSTAT="$(kubectl get pod $POD -o jsonpath='{.status.phase}' || failed )"
 
 if [[ "x$PODSTAT" == "xRunning" ]]; then
   passed
