@@ -4,7 +4,7 @@ If you are still having trouble have you looked at the
 
 
 You may need to create a new pod but you'll need the yaml first
-
+```plain
 
 
 POD=changeme
@@ -16,6 +16,7 @@ vi pod.yaml
 ```{{exec}
 
 Now fix it!!!
+```plain
 
 k create -f pod.yaml
 ```{{exec}}
