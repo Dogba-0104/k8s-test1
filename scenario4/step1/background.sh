@@ -44,3 +44,5 @@ spec:
 
       periodSeconds: 5
 EOF
+
+sleep 10
